@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  backend:
+    build: ./Backend
+    ports:
+      - "1200:1200"
+    env_file: ./Backend/config/config.env
+
+  frontend:
+    build: ./Frontend
+    ports:
+      - "3000:3000"
+    env_file: ./Frontend/config/config.env
